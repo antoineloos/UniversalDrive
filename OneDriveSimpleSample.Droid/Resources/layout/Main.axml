@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/AuthenticateButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Authenticate" />
+    <Button
+        android:id="@+id/GetRootFolderButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Root Folder" />
+    <Button
+        android:id="@+id/GetAppFolderButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Get App Folder" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/FolderPathText" />
+    <Button
+        android:id="@+id/BrowseSubfolderButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Browse Subfolder" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/DownloadFilePathText" />
+    <Button
+        android:id="@+id/DownloadFileButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Download a file" />
+    <Button
+        android:id="@+id/UploadFileButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload a file" />
+    <Button
+        android:id="@+id/GetLinkButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Get a link" />
+    <Button
+        android:id="@+id/LogOffButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Log off" />
+</LinearLayout>

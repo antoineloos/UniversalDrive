@@ -1,0 +1,2 @@
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Data\OneDriveSimpleSample.Data.csproj;neutral
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\OneDriveSimpleSample.Univ.csproj;x86

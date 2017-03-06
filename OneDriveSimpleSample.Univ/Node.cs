@@ -1,5 +1,6 @@
 ﻿using OneDriveSimpleSample.Response;
 using OneDriveSimpleSample.Utils;
+using OneDriveSimpleSample.Views;
 using Prism.Mvvm;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,19 @@ namespace OneDriveSimpleSample
 
         }
 
+        public Node(Google.Apis.Drive.v3.Data.File item)
+        {
+            this.Name = item.Name;
+            
+            if (item.ThumbnailLink!=null) this.ThumbnailUrl = item.ThumbnailLink;
+            if (!(item.Kind == "drive#file"))
+            {
+                this.Type = NodeType.Directory;
+                this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
+            }
+            else this.Type = NodeType.File;
+
+        }
 
         public string Name { get; set; }
 
@@ -91,7 +105,7 @@ namespace OneDriveSimpleSample
         public async Task<IStorageItem> GetStorageItem()
         {
 
-            return await SaveStreamToFile(await MainPage._service.RefreshAndDownloadContent(this.ApiResponse, false), Name);
+            return await SaveStreamToFile(await OneDriveFilePage._service.RefreshAndDownloadContent(this.ApiResponse, false), Name);
                 
         }
 

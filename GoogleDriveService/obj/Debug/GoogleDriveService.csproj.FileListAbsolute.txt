@@ -1,0 +1,16 @@
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\bin\Debug\GoogleDriveService.dll
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\bin\Debug\GoogleDriveService.pdb
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\bin\Debug\GoogleDriveService.pri
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\GoogleDriveService.dll
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\GoogleDriveService.pdb
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\priconfig.xml
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\priconfig.xml.intermediate
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\layout.resfiles
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\layout.resfiles.intermediate
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\resources.resfiles
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\resources.resfiles.intermediate
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\pri.resfiles
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\pri.resfiles.intermediate
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\qualifiers.txt
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\obj\Debug\MultipleQualifiersPerDimensionFound.txt

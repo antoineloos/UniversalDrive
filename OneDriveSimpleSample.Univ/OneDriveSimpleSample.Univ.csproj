@@ -130,6 +130,7 @@
     <Content Include="Assets\excel.jpg" />
     <Content Include="Assets\folder_drop.jpg" />
     <Content Include="Assets\musicdrop.jpg" />
+    <Content Include="Assets\Open_file_document_paper_folder.png" />
     <Content Include="Assets\pdf.jpg" />
     <Content Include="Assets\powerpoint.jpg" />
     <Content Include="Assets\word.jpg" />

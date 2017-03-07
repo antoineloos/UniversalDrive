@@ -23496,10 +23496,10 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\GoogleDriveService\\GoogleDriveService.csproj",
+      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\GoogleDriveService\\GoogleDriveService.csproj",
       "projectName": "GoogleDriveService",
-      "projectPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\GoogleDriveService\\GoogleDriveService.csproj",
-      "projectJsonPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\GoogleDriveService\\project.json",
+      "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\GoogleDriveService\\GoogleDriveService.csproj",
+      "projectJsonPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\GoogleDriveService\\project.json",
       "projectStyle": "ProjectJson"
     },
     "dependencies": {

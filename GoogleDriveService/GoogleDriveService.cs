@@ -1,5 +1,6 @@
 ﻿using Google.Apis.Auth.OAuth2;
 using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Download;
 using Google.Apis.Drive.v3;
 using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
@@ -84,14 +85,52 @@ namespace GoogleDriveService
 
                         AccessToken = response.AccessToken;
 
-                       // RetrieveAllFiles(service);
-
-
-
-                    }
+                    
+                    
+                }
 
                 
             }
+        }
+
+
+        public Task<MemoryStream> DownloadFile(string fileId, string mimetype)
+        {
+            var stream = new System.IO.MemoryStream();
+            return Task.Factory.StartNew(() => 
+            {
+                var request = _service.Files.Export(fileId, mimetype);
+
+                // Add a handler which will be notified on progress changes.
+                // It will notify on each chunk download and when the
+                // download is completed or failed.
+                request.MediaDownloader.ProgressChanged +=
+                        (IDownloadProgress progress) =>
+                        {
+                            switch (progress.Status)
+                            {
+                                case DownloadStatus.Downloading:
+                                    {
+                                        Console.WriteLine(progress.BytesDownloaded);
+                                        break;
+                                    }
+                                case DownloadStatus.Completed:
+                                    {
+                                        Console.WriteLine("Download complete.");
+                                        break;
+                                    }
+                                case DownloadStatus.Failed:
+                                    {
+                                        Console.WriteLine("Download failed.");
+                                        break;
+                                    }
+                            }
+                        };
+                 request.Download(stream);
+                 return stream;
+            });
+            
+
         }
 
         public bool CheckAuthenticate(Action successCallback, Action errorCallback)
@@ -122,13 +161,34 @@ namespace GoogleDriveService
             }
         }
 
-        //private static List<Google.Apis.Drive.v3.Data.File> RetrieveFilesOfAnFolder(DriveService service)
-        //{
-        //    return service.Files.List().Execute().Files.ToList();
-        //}
+        public List<Google.Apis.Drive.v3.Data.File> GetRootFolderChildren()
+        {
+            var request = _service.Files.List();
+            request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id ";
+            request.Q = "'root' in parents and trashed = false";
+            return request.Execute().Files.ToList();
+        }
+
+        public List<Google.Apis.Drive.v3.Data.File> GetSharedWithMeChildren()
+        {
+            var request = _service.Files.List();
+            request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id ";
+            request.Q = "sharedWithMe=true and trashed=false";
+            return request.Execute().Files.ToList();
+        }
+
+        public List<Google.Apis.Drive.v3.Data.File> GetSubFolderChildren(string folderId)
+        {
+            var request = _service.Files.List();
+            request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id ";
+            request.Q = $"'{folderId}' in parents and trashed = false";
+            return request.Execute().Files.ToList();
+        }
 
 
+        
 
+        [Obsolete("pourquoi tu fais ça serieux ? c'est récursif ! tu cherche la merde c'est ça ? ")]
         public List<Google.Apis.Drive.v3.Data.File> RetrieveAllFiles()
         {
             
@@ -136,7 +196,7 @@ namespace GoogleDriveService
             var request = _service.Files.List();
             
             // request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id , files/kind";
-            request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id , files/kind, files/";
+            request.Fields = "files/thumbnailLink, files/name, files/mimeType, files/id ";
             result = request.Execute().Files.ToList();
             do
             {
@@ -166,37 +226,6 @@ namespace GoogleDriveService
             return result;
         }
 
-        //public static string FindFolder(DriveService service, String parentfolderId, string FolderName)
-        //{
-        //    ChildrenResource.ListRequest request = service.Children.List(parentfolderId);
-        //    request.Q = "mimeType='application/vnd.google-apps.folder' and title='" + FolderName + "' ";
-        //    do
-        //    {
-        //        try
-        //        {
-        //            ChildList children = request.Fetch();
-
-        //            if (children != null && children.Items.Count > 0)
-        //            {
-
-        //                return children.Items[0].Id;
-        //            }
-
-        //            foreach (ChildReference child in children.Items)
-        //            {
-        //                Console.WriteLine("File Id: " + child.Id);
-        //            }
-        //            request.PageToken = children.NextPageToken;
-        //        }
-        //        catch (Exception e)
-        //        {
-        //            Console.WriteLine("An error occurred: " + e.Message);
-        //            request.PageToken = null;
-        //        }
-        //    } while (!String.IsNullOrEmpty(request.PageToken));
-
-        //    return string.Empty;
-        //}
-
+      
     }
 }

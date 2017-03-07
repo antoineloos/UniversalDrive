@@ -1,4 +1,5 @@
 ﻿using GoogleDriveService;
+using Prism.Commands;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -27,15 +28,18 @@ namespace OneDriveSimpleSample.Views
     /// </summary>
     public sealed partial class GoogleDrivePage : Page,INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        private static string _folderPath;
+        private Node currentFolder;
+        private List<Node> LstParent;
+        public DelegateCommand<Node> NavigateCommand => new DelegateCommand<Node>(Navigate);
 
-        public static readonly GoogleDriveService.GoogleDriveService _service = new GoogleDriveService.GoogleDriveService();
-
-        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        private bool isNotRootFolder;
+        public bool IsNotRootFolder
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            get { return isNotRootFolder; }
+            set {
+                isNotRootFolder = value;
+                NotifyPropertyChanged(nameof(IsNotRootFolder));
             }
         }
 
@@ -52,6 +56,66 @@ namespace OneDriveSimpleSample.Views
                 NotifyPropertyChanged(nameof(LstNode));
             }
         }
+
+        public void Navigate(Node obj)
+        {
+            if(obj.Type== NodeType.Directory)
+            {
+                ShowBusy(true);
+                currentFolder = (Node)obj;
+                if (isNotRootFolder == false) IsNotRootFolder = true;
+
+                if (obj.Name.Contains("Shared with me"))
+                {
+                    LstNode.Clear();
+                    var children = _service.GetSharedWithMeChildren();
+
+                    foreach (Google.Apis.Drive.v3.Data.File item in children)
+                    {
+
+                        LstNode.Add(new Node(item) { _parent = (Node)obj });
+
+                    }
+                }
+
+                else
+                {
+                    currentFolder = (Node)obj;
+                    LstParent = new List<Node>();
+
+
+                    LstNode.Clear();
+                    var children = _service.GetSubFolderChildren(obj.fileRef.Id);
+
+                    foreach (Google.Apis.Drive.v3.Data.File item in children)
+                    {
+
+                        LstNode.Add(new Node(item) { _parent = (Node)obj });
+
+                    }
+                }
+
+
+
+
+                ShowBusy(false);
+            }
+            
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public static readonly GoogleDriveService.GoogleDriveService _service = new GoogleDriveService.GoogleDriveService();
+
+        private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        
 
         public GoogleDrivePage()
         {
@@ -95,17 +159,38 @@ namespace OneDriveSimpleSample.Views
 
         private void Navigate()
         {
-           foreach(Google.Apis.Drive.v3.Data.File elem in _service.RetrieveAllFiles())
-           {
+           
+            LstNode.Clear();
+            foreach (Google.Apis.Drive.v3.Data.File elem in _service.GetRootFolderChildren())
+            {
                 LstNode.Add(new Node(elem));
-                Debug.WriteLine(elem.Name+ " kind : "+elem.Kind);
-           }
+                
+            }
+            LstNode.Add(new Node("Shared with me", NodeType.Directory) );
         }
+
+
 
         private void ShowBusy(bool isBusy)
         {
             Progress.IsActive = isBusy;
             PleaseWaitCache.Visibility = isBusy ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentFolder._parent != null) Navigate(currentFolder._parent);
+            else
+            {
+                Navigate();
+                IsNotRootFolder = false;
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(MainPage));
         }
     }
 }

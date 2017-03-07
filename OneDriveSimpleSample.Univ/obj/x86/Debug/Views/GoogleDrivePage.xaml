@@ -22,7 +22,7 @@
                     Value="50" />
             <Setter Property="Margin"
                     Value="5" />
-            
+
             <Setter Property="VerticalAlignment"
                     Value="Stretch" />
         </Style>
@@ -40,56 +40,83 @@
         <ScrollViewer>
             <StackPanel Orientation="Vertical" Margin="10">
                 <StackPanel Margin="12,0" Orientation="Horizontal" VerticalAlignment="Top">
-                    <Button Content="Authenticate"
-                        
-                        Style="{StaticResource ButtonStyle}" />
+
+                    <Button x:ConnectionId='4' 
+                        Content="&#xE80F;"
+                                            
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="#FF555555"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="70" Height="70" FontSize="50" >
+
+                    </Button>
 
 
+                    <Button x:ConnectionId='5' 
+                        Content="&#xE8DE;"
+                        Margin="50,0,5,0"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        IsEnabled="{Binding IsNotRootFolder}"
+                        Foreground="#FF33B5E5"
+                                                
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
 
-                    <Button Content="Get App Folder"
-                      
-                        Style="{StaticResource ButtonStyle}" />
+                    </Button>
 
+                    <Button 
+                        Content="&#xE898;"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
 
+                    </Button>
 
+                    <Button 
+                        Content="&#xE71B;"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
 
+                    </Button>
 
-                    <TextBox x:ConnectionId='4' x:Name="DownloadFilePathText"
-                         PlaceholderText="Enter a path without leading '/'"
-                         Style="{StaticResource TextBoxStyle}" />
+                    <Button 
+                       
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
+                        <Button.Content>
+                            <Viewbox Margin="-10,-10" >
+                                <Canvas x:ConnectionId='6'  Name="icon_noun_57650_cc" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="25" Height="25" >
 
-                    <Button Content="Download a file"
-                      
-                        Style="{StaticResource ButtonStyle}" />
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M15.104 12.928h-6.4" />
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M10.141 14.464l-1.628-1.628 1.7-1.7" />
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M11.392 9.984v-2.432h5.632v10.752h-5.376v-2.432" />
+                                </Canvas>
+                            </Viewbox>
+                        </Button.Content>
 
-                    <Button Content="Upload a file"
-                        
-                        Style="{StaticResource ButtonStyle}" />
-
-                    <Button Content="Get a link"
-                        
-                        Style="{StaticResource ButtonStyle}" />
-
-                    <Button Content="Log off"
-                     
-                        Style="{StaticResource ButtonStyle}" />
+                    </Button>
                 </StackPanel>
-                <Button Content="&#xE72B;"
-                        
-                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White" BorderThickness="2" BorderBrush="#FF00B4CC" FontFamily="Segoe MDL2 Assets" Foreground="#FF00B4CC" Width="50" Height="50" FontSize="25"/>
+
                 <utils:VariableGridView  ItemsSource="{Binding LstNode}">
                     <GridView.ItemTemplate>
                         <DataTemplate>
                             <Grid Width="100" Height="100" >
                                 <interactivity:Interaction.Behaviors>
                                     <core:EventTriggerBehavior EventName="Tapped">
-                                        <core:InvokeCommandAction Command="{Binding Path=DataContext.NavigateCommand , ElementName=mainframe}" CommandParameter="{Binding}"/>
+                                        <core:InvokeCommandAction Command="{Binding Path=DataContext.NavigateCommand , ElementName=googleframe}" CommandParameter="{Binding}"/>
                                     </core:EventTriggerBehavior>
                                 </interactivity:Interaction.Behaviors>
                                 <Border  CornerRadius="5">
-                                    <StackPanel Margin="5">
+                                    <StackPanel >
                                         <Image Source="{Binding Thumbnail}" Width="80" Height="70" Stretch="UniformToFill" />
-                                        <TextBlock Text="{Binding Name}"/>
+                                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap" FontSize="11"/>
 
 
                                     </StackPanel>

@@ -55,7 +55,16 @@ namespace OneDriveSimpleSample.Views
 
         }
 
-
+        private bool isNotRootFolder;
+        public bool IsNotRootFolder
+        {
+            get { return isNotRootFolder; }
+            set
+            {
+                isNotRootFolder = value;
+                NotifyPropertyChanged(nameof(IsNotRootFolder));
+            }
+        }
 
         private string ConstructPathFromNodeList(List<Node> lstParent)
         {
@@ -67,33 +76,37 @@ namespace OneDriveSimpleSample.Views
 
         private async void Navigate(INode obj)
         {
-            ShowBusy(true);
-            currentFolder = (Node)obj;
-            LstParent = new List<Node>();
-            GetParent((Node)obj);
-            var currentPath = ConstructPathFromNodeList(LstParent);
-
-
-
-            var subfolder = await _service.GetItem(currentPath + obj.Name);
-
-
-
-
-            LstNode.Clear();
-            var children = await _service.PopulateChildren(subfolder);
-
-            foreach (ItemInfoResponse item in children)
+            if(obj.Type == NodeType.Directory)
             {
-                Debug.WriteLine(item.Name);
-                Debug.WriteLine(item.Thumbnails.Length);
-                LstNode.Add(new Node(item) { _parent = (Node)obj });
+                ShowBusy(true);
+                currentFolder = (Node)obj;
+                LstParent = new List<Node>();
+                GetParent((Node)obj);
+                var currentPath = ConstructPathFromNodeList(LstParent);
 
+
+
+                var subfolder = await _service.GetItem(currentPath + obj.Name);
+
+
+
+
+                LstNode.Clear();
+                var children = await _service.PopulateChildren(subfolder);
+
+                foreach (ItemInfoResponse item in children)
+                {
+                    
+                    LstNode.Add(new Node(item) { _parent = (Node)obj });
+
+                }
+
+
+
+                ShowBusy(false);
             }
 
-
-
-            ShowBusy(false);
+            
         }
 
         private async void Download(Node obj)
@@ -119,29 +132,32 @@ namespace OneDriveSimpleSample.Views
                 });
             var contentStream = await ((StorageFile)fs).OpenStreamForReadAsync();
             var targetFile = await picker.PickSaveFileAsync();
-
-            using (var targetStream = await targetFile.OpenStreamForWriteAsync())
+            if (targetFile != null)
             {
-                using (var writer = new BinaryWriter(targetStream))
+                using (var targetStream = await targetFile.OpenStreamForWriteAsync())
                 {
-                    contentStream.Position = 0;
-
-                    using (var reader = new BinaryReader(contentStream))
+                    using (var writer = new BinaryWriter(targetStream))
                     {
-                        byte[] bytes;
+                        contentStream.Position = 0;
 
-                        do
+                        using (var reader = new BinaryReader(contentStream))
                         {
-                            bytes = reader.ReadBytes(1024);
-                            writer.Write(bytes);
+                            byte[] bytes;
+
+                            do
+                            {
+                                bytes = reader.ReadBytes(1024);
+                                writer.Write(bytes);
+                            }
+                            while (bytes.Length == 1024);
                         }
-                        while (bytes.Length == 1024);
                     }
                 }
-            }
 
-            var successDialog = new MessageDialog("Done saving the file!", "Success");
-            await successDialog.ShowAsync();
+                var successDialog = new MessageDialog("Done saving the file!", "Success");
+                await successDialog.ShowAsync();
+            }
+            
             ShowBusy(false);
         }
 
@@ -183,7 +199,7 @@ namespace OneDriveSimpleSample.Views
         {
 
 
-            DownloadFilePathText.Text = _downloadFilePath ?? string.Empty;
+           
         }
 
         protected override void OnNavigatingFrom(NavigatingCancelEventArgs e)
@@ -197,101 +213,10 @@ namespace OneDriveSimpleSample.Views
             
         }
 
-       
 
-        private async void DownloadFileClick(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(DownloadFilePathText.Text))
-            {
-                var dialog = new MessageDialog("Please enter a path to an existing file, for example Apps/OneDriveSample/Test.jpg", "Error!");
-                await dialog.ShowAsync();
-                return;
-            }
-
-            Exception error = null;
-            ItemInfoResponse foundFile = null;
-            Stream contentStream = null;
-
-            ShowBusy(true);
-
-            try
-            {
-                foundFile = await _service.GetItem(DownloadFilePathText.Text);
-
-                if (foundFile == null)
-                {
-                    var dialog = new MessageDialog($"Not found: {DownloadFilePathText.Text}");
-                    await dialog.ShowAsync();
-                    ShowBusy(false);
-                    return;
-                }
-
-                // Get the file's content
-                contentStream = await _service.RefreshAndDownloadContent(foundFile, false);
-
-                if (contentStream == null)
-                {
-                    var dialog = new MessageDialog($"Content not found: {DownloadFilePathText.Text}");
-                    await dialog.ShowAsync();
-                    ShowBusy(false);
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                error = ex;
-            }
-
-            if (error != null)
-            {
-                var dialog = new MessageDialog(error.Message, "Error!");
-                await dialog.ShowAsync();
-                ShowBusy(false);
-                return;
-            }
-
-            // Save the retrieved stream to the local drive
-
-            var picker = new FileSavePicker
-            {
-                SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
-                SuggestedFileName = foundFile.Name
-            };
-
-            var extension = Path.GetExtension(foundFile.Name);
-
-            picker.FileTypeChoices.Add(
-                $"{extension} files",
-                new List<string>
-                {
-                    extension
-                });
-
-            var targetFile = await picker.PickSaveFileAsync();
-
-            using (var targetStream = await targetFile.OpenStreamForWriteAsync())
-            {
-                using (var writer = new BinaryWriter(targetStream))
-                {
-                    contentStream.Position = 0;
-
-                    using (var reader = new BinaryReader(contentStream))
-                    {
-                        byte[] bytes;
-
-                        do
-                        {
-                            bytes = reader.ReadBytes(1024);
-                            writer.Write(bytes);
-                        }
-                        while (bytes.Length == 1024);
-                    }
-                }
-            }
-
-            var successDialog = new MessageDialog("Done saving the file!", "Success");
-            await successDialog.ShowAsync();
-            ShowBusy(false);
+            Frame.Navigate(typeof(MainPage));
         }
 
         private async void GetAppRootClick(object sender, RoutedEventArgs e)

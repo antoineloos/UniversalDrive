@@ -10,19 +10,19 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>cd4e4838-ca7c-4237-b446-2267e445f0af</PackageIdentityName>
     <PackageIdentityPublisher>CN=lbugn</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\bin\x86\Debug\OneDriveSimpleSample.Univ.exe">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\OneDriveSimpleSample.Univ.exe">
       <PackagePath>entrypoint\OneDriveSimpleSample.Univ.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
@@ -421,77 +421,80 @@
     <AppxPackagedFile Include="C:\Users\Antoine\.nuget\packages\Unity\4.0.1\lib\win8\Microsoft.Practices.Unity.dll">
       <PackagePath>Microsoft.Practices.Unity.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\GoogleDriveService\bin\Debug\GoogleDriveService.dll">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\bin\Debug\GoogleDriveService.dll">
       <PackagePath>GoogleDriveService.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll">
       <PackagePath>OneDriveSimpleSample.Data.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll.config">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll.config">
       <PackagePath>OneDriveSimpleSample.Data.dll.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\doc_blc.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\doc_blc.png">
       <PackagePath>Assets\doc_blc.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\Open_file_document_paper_folder.png">
+      <PackagePath>Assets\Open_file_document_paper_folder.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\excel.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\excel.jpg">
       <PackagePath>Assets\excel.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\folder_drop.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\folder_drop.jpg">
       <PackagePath>Assets\folder_drop.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\musicdrop.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\musicdrop.jpg">
       <PackagePath>Assets\musicdrop.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\pdf.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\pdf.jpg">
       <PackagePath>Assets\pdf.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\powerpoint.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\powerpoint.jpg">
       <PackagePath>Assets\powerpoint.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Assets\word.jpg">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\word.jpg">
       <PackagePath>Assets\word.jpg</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\bin\x86\Debug\OneDriveSimpleSample.Univ.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\OneDriveSimpleSample.Univ.xr.xml">
       <PackagePath>OneDriveSimpleSample.Univ.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\OneDriveSimpleSample\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\OneDriveSimpleSample.Univ.exe">
+    <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\OneDriveSimpleSample.Univ.exe">
       <PackagePath>OneDriveSimpleSample.Univ.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

@@ -24336,19 +24336,19 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\OneDriveSimpleSample.Univ\\OneDriveSimpleSample.Univ.csproj",
+      "projectUniqueName": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Univ\\OneDriveSimpleSample.Univ.csproj",
       "projectName": "OneDriveSimpleSample.Univ",
-      "projectPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\OneDriveSimpleSample.Univ\\OneDriveSimpleSample.Univ.csproj",
-      "projectJsonPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\OneDriveSimpleSample.Univ\\project.json",
+      "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Univ\\OneDriveSimpleSample.Univ.csproj",
+      "projectJsonPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Univ\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\GoogleDriveService\\GoogleDriveService.csproj": {
-              "projectPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\GoogleDriveService\\GoogleDriveService.csproj"
+            "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\GoogleDriveService\\GoogleDriveService.csproj": {
+              "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\GoogleDriveService\\GoogleDriveService.csproj"
             },
-            "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj": {
-              "projectPath": "C:\\Users\\Antoine\\Desktop\\OneDriveSimpleSample\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj"
+            "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj": {
+              "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj"
             }
           }
         }

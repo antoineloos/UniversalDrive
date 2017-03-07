@@ -46,7 +46,16 @@ namespace OneDriveSimpleSample
     public class Node : BindableBase, INode
     {
         internal readonly IStorageItem _item;
-        
+
+        public Google.Apis.Drive.v3.Data.File fileRef;
+
+        public Node(String name, NodeType type)
+        {
+            this.Name = name;
+            this.Type = type;
+            if(this.Type == NodeType.Directory) this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
+
+        }
 
         public Node(IStorageItem item)
         {
@@ -63,21 +72,29 @@ namespace OneDriveSimpleSample
                 this.Type = NodeType.Directory;
                 this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
             }
-            else this.Type = NodeType.File;
+            else
+            {
+                this.Type = NodeType.File;
+                
+            }
 
         }
 
         public Node(Google.Apis.Drive.v3.Data.File item)
         {
             this.Name = item.Name;
-            
+            this.fileRef = item;
             if (item.ThumbnailLink!=null) this.ThumbnailUrl = item.ThumbnailLink;
-            if (!(item.Kind == "drive#file"))
+            if ((item.MimeType == "application/vnd.google-apps.folder"))
             {
                 this.Type = NodeType.Directory;
                 this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
             }
-            else this.Type = NodeType.File;
+            else
+            {
+                this.Type = NodeType.File;
+               
+            }
 
         }
 
@@ -140,9 +157,9 @@ namespace OneDriveSimpleSample
                 {
                     getImageFromURL(ThumbnailUrl);
                 }
-                else if (_thumbnail == null)
+                else 
                 {
-                    _thumbnail = new BitmapImage(ThumbnailFactory.Instance.GetThumbnailPath(Name));
+                   if(this.Type== NodeType.File) _thumbnail = new BitmapImage(ThumbnailFactory.Instance.GetThumbnailPath(this.Name));
                 }
                 return _thumbnail;
             }

@@ -1,0 +1,159 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="OneDriveSimpleSample.Views.OneDriveFilePage"
+     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:utils="using:OneDriveSimpleSample.Utils"
+      xmlns:interactivity="using:Microsoft.Xaml.Interactivity"
+      xmlns:core="using:Microsoft.Xaml.Interactions.Core"
+                               
+      x:Name="mainframe"
+      Height="1080"
+      Width="1920"
+      mc:Ignorable="d">
+
+
+    <Page.Resources>
+        <utils:FolderToVisibilityConverter x:Key="convBtn"/>
+        <Style x:Key="ButtonStyle"
+               TargetType="Button">
+            <Setter Property="Height"
+                    Value="50" />
+            <Setter Property="Margin"
+                    Value="5" />
+           
+            <Setter Property="VerticalAlignment"
+                    Value="Stretch" />
+        </Style>
+
+        <Style x:Key="TextBoxStyle"
+               TargetType="TextBox">
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Width" Value="400"/>
+            <Setter Property="Height" Value="50"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical" Margin="10">
+                <StackPanel Margin="12,0" Orientation="Horizontal" VerticalAlignment="Top">
+
+                    <Button x:ConnectionId='4' 
+                        Content="&#xE80F;"
+                                            
+                        FontFamily="Segoe MDL2 Assets"
+                        Foreground="#FF555555"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="70" Height="70" FontSize="50" >
+
+                    </Button>
+
+
+                    <Button x:ConnectionId='5' 
+                        Content="&#xE8DE;"
+                        Margin="50,0,5,0"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        IsEnabled="{Binding IsNotRootFolder}"
+                        Foreground="#FF33B5E5"
+                                                
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
+
+                    </Button>
+
+                    <Button 
+                        Content="&#xE898;"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
+
+                    </Button>
+
+                    <Button 
+                        Content="&#xE71B;"
+                        FontFamily="Segoe MDL2 Assets"
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
+
+                    </Button>
+
+                    <Button 
+                       
+                        BorderBrush="#FF33B5E5" 
+                        Foreground="#FF33B5E5"
+                    BorderThickness="1"
+                        Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
+                        <Button.Content>
+                            <Viewbox Margin="-10,-10" >
+                                <Canvas x:ConnectionId='6'  Name="icon_noun_57650_cc" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Width="25" Height="25" >
+
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M15.104 12.928h-6.4" />
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M10.141 14.464l-1.628-1.628 1.7-1.7" />
+                                    <Path  StrokeLineJoin="Miter" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeMiterLimit="10" StrokeThickness="0.768" Stroke="#FF33B5E5" Data="M11.392 9.984v-2.432h5.632v10.752h-5.376v-2.432" />
+                                </Canvas>
+                            </Viewbox>
+                        </Button.Content>
+
+                    </Button>
+                </StackPanel>
+               
+                <utils:VariableGridView ItemsSource="{Binding LstNode}">
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Width="100" Height="100" >
+                                <interactivity:Interaction.Behaviors>
+                                    <core:EventTriggerBehavior EventName="Tapped">
+                                        <core:InvokeCommandAction Command="{Binding Path=DataContext.NavigateCommand , ElementName=mainframe}" CommandParameter="{Binding}"/>
+                                    </core:EventTriggerBehavior>
+                                </interactivity:Interaction.Behaviors>
+                                <Border  CornerRadius="5">
+                                    <StackPanel >
+                                        <Image Source="{Binding Thumbnail}" Width="80" Height="70" Stretch="UniformToFill" />
+                                        <TextBlock Text="{Binding Name}" TextWrapping="Wrap" FontSize="11"/>
+
+
+                                    </StackPanel>
+                                </Border>
+                                <Ellipse Height="35" Width="35" HorizontalAlignment="Left" Margin="-10" VerticalAlignment="Top" Stroke="#FF00B4CC" Fill="White" StrokeThickness="1" Visibility="{Binding Type, Converter={StaticResource convBtn}}"/>
+                                <Button Content="&#xE896;" Background="Transparent" Margin="-10" Foreground="#FF00B4CC" FontSize="16" Command="{Binding Path=DataContext.DownloadCommand , ElementName=mainframe}" Visibility="{Binding Type, Converter={StaticResource convBtn}}" CommandParameter="{Binding}" FontFamily="Segoe MDL2 Assets" Height="35" Width="35" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            </Grid>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                    <GridView.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VariableSizedWrapGrid ItemHeight="150"
+                                                       ItemWidth="150"
+                                                       Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </GridView.ItemsPanel>
+                    <GridView.ItemContainerStyle>
+                        <Style TargetType="GridViewItem">
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="Padding" Value="0" />
+                        </Style>
+                    </GridView.ItemContainerStyle>
+                </utils:VariableGridView>
+            </StackPanel>
+
+        </ScrollViewer>
+
+        <Rectangle x:ConnectionId='2' Fill="#77000000"
+                   x:Name="PleaseWaitCache"
+                   Visibility="Collapsed" />
+
+        <ProgressRing x:ConnectionId='3' x:Name="Progress"
+                      VerticalAlignment="Center"
+                      HorizontalAlignment="Center"
+                      Width="40"
+                      Height="40" />
+    </Grid>
+</Page>
+
+

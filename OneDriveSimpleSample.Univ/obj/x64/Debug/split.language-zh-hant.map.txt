@@ -1,0 +1,6 @@
+﻿[ResourceMetadata]
+"ResourceId"			"split.language-zh-hant"
+"ResourceDimensions"		"language-zh-tw"
+
+[Files]
+"C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x64\Debug\split.language-zh-hant.pri"			"resources.pri"

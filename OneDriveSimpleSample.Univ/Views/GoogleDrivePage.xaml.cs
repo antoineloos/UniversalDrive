@@ -1,4 +1,8 @@
-﻿using GoogleDriveService;
+﻿using Google.Apis.Download;
+using Google.Apis.Drive.v3;
+using Google.Apis.Upload;
+using GoogleDriveService;
+using OneDriveSimpleSample.Utils;
 using Prism.Commands;
 using System;
 using System.Collections.Generic;
@@ -9,8 +13,13 @@ using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -32,6 +41,7 @@ namespace OneDriveSimpleSample.Views
         private Node currentFolder;
         private List<Node> LstParent;
         public DelegateCommand<Node> NavigateCommand => new DelegateCommand<Node>(Navigate);
+        public DelegateCommand<Node> DownloadCommand => new DelegateCommand<Node>(Download);
 
         private bool isNotRootFolder;
         public bool IsNotRootFolder
@@ -188,9 +198,154 @@ namespace OneDriveSimpleSample.Views
             }
         }
 
+        private async void Download(Node obj)
+        {
+
+            var picker = new FileSavePicker
+            {
+                SuggestedStartLocation = PickerLocationId.DocumentsLibrary,
+                SuggestedFileName = obj.Name
+            };
+
+            var extension = Path.GetExtension(obj.Name);
+
+            picker.FileTypeChoices.Add(
+                $"{extension} files",
+                new List<string>
+                {
+                    extension
+                });
+
+            StorageFile file = await picker.PickSaveFileAsync();
+            if (file != null)
+            {
+                ShowBusy(true);
+
+                var request = _service._service.Files.Get(obj.fileRef.Id);
+                Stream stream = new MemoryStream();
+                request.MediaDownloader.ProgressChanged +=
+               async (Google.Apis.Download.IDownloadProgress progress) =>
+                {
+                    switch (progress.Status)
+                    {
+                        case DownloadStatus.Downloading:
+                            {
+                                Console.WriteLine(progress.BytesDownloaded);
+                                break;
+                            }
+                        case DownloadStatus.Completed:
+                            {
+                                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                                async () =>
+                                {
+                                    var successDialog = new MessageDialog("Done saving the file!", "Success");
+                                    await successDialog.ShowAsync();
+                                    stream.Dispose();
+                                    
+                                    ShowBusy(false);
+                                });
+                                
+                                break;
+                            }
+                        case DownloadStatus.Failed:
+                            {
+                                Console.WriteLine("Download failed.");
+                                break;
+                            }
+                    }
+                };
+
+                stream = await file.OpenStreamForWriteAsync();
+                var downloadManager =  await request.DownloadAsync(stream);
+                
+                
+            }
+            
+
+
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Frame.Navigate(typeof(MainPage));
+        }
+
+        private async void Upload_Click(object sender, RoutedEventArgs e)
+        {
+            Stream stream;
+            var picker = new FileOpenPicker
+            {
+                SuggestedStartLocation = PickerLocationId.DocumentsLibrary
+            };
+
+            picker.FileTypeFilter.Add("*");
+            var file = await picker.PickSingleFileAsync();
+            ShowBusy(true);
+            if (file != null)
+            {
+                var fileMetadata = new Google.Apis.Drive.v3.Data.File()
+                {
+                    Name = file.Name,
+                    MimeType = MIMEAssistant.GetMIMEType(file.Name)
+                };
+            
+                FilesResource.CreateMediaUpload request;
+                using (stream = await file.OpenStreamForReadAsync())
+                {
+                    
+                    request = _service._service.Files.Create(
+                        fileMetadata, stream, MIMEAssistant.GetMIMEType(file.Name));
+                    request.Fields = "id , name , mimeType";
+                    //request.ChunkSize = FilesResource.CreateMediaUpload.MinimumChunkSize;
+                    request.ProgressChanged += async(IUploadProgress progress) => 
+                    {
+                        if (progress?.Status == UploadStatus.Completed )
+                        {
+                            try
+                            {
+
+
+                                Debug.WriteLine("completed");
+                                await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                                    async() =>
+                                    {
+                                        var successDialog = new MessageDialog("Done saving the file!", "Success");
+                                        await successDialog.ShowAsync();
+                                        ShowBusy(false);
+                                  });
+                                var resfile = request.ResponseBody;
+
+                                if (resfile != null)
+                                {
+                                    await Windows.ApplicationModel.Core.CoreApplication.MainView.CoreWindow.Dispatcher.RunAsync(CoreDispatcherPriority.Normal,
+                                     () =>
+                                     {
+                                         LstNode.Add(new Node(resfile) { _parent = currentFolder });
+                                     });
+                                    Debug.WriteLine("File: " + resfile.Name + "  " + resfile.Id);
+                                    stream?.Dispose();
+
+                                }
+                            }
+                            catch(Exception ex) { Debug.WriteLine(ex.Message); }
+                            
+                        }
+                        else if (progress?.Status == UploadStatus.Uploading ) Debug.WriteLine("uploading");
+                    };
+
+
+
+
+
+                    await request.UploadAsync();
+                   
+                  
+                }
+
+                
+            }
+            else ShowBusy(false);
+
         }
     }
 }

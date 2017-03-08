@@ -4,7 +4,8 @@
     "Microsoft.Xaml.Behaviors.Uwp.Managed": "2.0.0",
     "Prism.Core": "6.2.0",
     "Prism.Unity": "6.2.0",
-    "Prism.Windows": "6.0.2"
+    "Prism.Windows": "6.0.2",
+    "Zlib.Portable": "1.11.0"
   },
   "frameworks": {
     "uap10.0": {}

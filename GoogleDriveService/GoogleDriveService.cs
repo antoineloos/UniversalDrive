@@ -94,12 +94,15 @@ namespace GoogleDriveService
         }
 
 
-        public Task<MemoryStream> DownloadFile(string fileId, string mimetype)
+        public MemoryStream DownloadFile(string fileId, string mimetype)
         {
-            var stream = new System.IO.MemoryStream();
-            return Task.Factory.StartNew(() => 
+            try
             {
+                var stream = new System.IO.MemoryStream();
+
                 var request = _service.Files.Export(fileId, mimetype);
+
+                
 
                 // Add a handler which will be notified on progress changes.
                 // It will notify on each chunk download and when the
@@ -126,9 +129,17 @@ namespace GoogleDriveService
                                     }
                             }
                         };
-                 request.Download(stream);
-                 return stream;
-            });
+                request.Download(stream);
+                return stream;
+            }
+            catch(Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+                return null;
+            }
+
+           
+           
             
 
         }

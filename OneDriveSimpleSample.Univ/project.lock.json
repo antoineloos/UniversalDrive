@@ -2380,6 +2380,15 @@
           "lib/win8/Microsoft.Practices.Unity.dll": {}
         }
       },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -4898,6 +4907,15 @@
         "runtime": {
           "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
           "lib/win8/Microsoft.Practices.Unity.dll": {}
+        }
+      },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
       "GoogleDriveService/1.0.0": {
@@ -7459,6 +7477,15 @@
           "lib/win8/Microsoft.Practices.Unity.dll": {}
         }
       },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -9986,6 +10013,15 @@
         "runtime": {
           "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
           "lib/win8/Microsoft.Practices.Unity.dll": {}
+        }
+      },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
       "GoogleDriveService/1.0.0": {
@@ -12556,6 +12592,15 @@
           "lib/win8/Microsoft.Practices.Unity.dll": {}
         }
       },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -15083,6 +15128,15 @@
         "runtime": {
           "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
           "lib/win8/Microsoft.Practices.Unity.dll": {}
+        }
+      },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
       "GoogleDriveService/1.0.0": {
@@ -17651,6 +17705,15 @@
         "runtime": {
           "lib/win8/Microsoft.Practices.Unity.RegistrationByConvention.dll": {},
           "lib/win8/Microsoft.Practices.Unity.dll": {}
+        }
+      },
+      "Zlib.Portable/1.11.0": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
       "GoogleDriveService/1.0.0": {
@@ -24310,6 +24373,17 @@
         "unity.nuspec"
       ]
     },
+    "Zlib.Portable/1.11.0": {
+      "sha512": "T8FoSv/7DuP4ItfacfiD1a5Ra29e3ogZnK8KnaOhxooxHbNOf0Kj00DIyQqZupzVGB5BkluKJ1/aAFVtMYFUTw==",
+      "type": "package",
+      "path": "zlib.portable/1.11.0",
+      "files": [
+        "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll",
+        "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.xml",
+        "zlib.portable.1.11.0.nupkg.sha512",
+        "zlib.portable.nuspec"
+      ]
+    },
     "GoogleDriveService/1.0.0": {
       "type": "project",
       "path": "../GoogleDriveService/project.json",
@@ -24327,7 +24401,8 @@
       "Microsoft.Xaml.Behaviors.Uwp.Managed >= 2.0.0",
       "Prism.Core >= 6.2.0",
       "Prism.Unity >= 6.2.0",
-      "Prism.Windows >= 6.0.2"
+      "Prism.Windows >= 6.0.2",
+      "Zlib.Portable >= 1.11.0"
     ],
     "UAP,Version=v10.0": []
   },
@@ -24359,7 +24434,8 @@
       "Microsoft.Xaml.Behaviors.Uwp.Managed": "2.0.0",
       "Prism.Core": "6.2.0",
       "Prism.Unity": "6.2.0",
-      "Prism.Windows": "6.0.2"
+      "Prism.Windows": "6.0.2",
+      "Zlib.Portable": "1.11.0"
     },
     "frameworks": {
       "uap10.0": {}

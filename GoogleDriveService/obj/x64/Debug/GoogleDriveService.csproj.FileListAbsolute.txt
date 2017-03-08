@@ -1,0 +1,17 @@
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\bin\x64\Debug\GoogleDriveService.dll
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\bin\x64\Debug\GoogleDriveService.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\bin\x64\Debug\GoogleDriveService.pri
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\GoogleDriveService.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\GoogleDriveService.dll
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\GoogleDriveService.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\priconfig.xml
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\priconfig.xml.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\layout.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\layout.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\resources.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\resources.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\pri.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\pri.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\qualifiers.txt
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\qualifiers.txt.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt

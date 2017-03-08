@@ -53,7 +53,7 @@ namespace OneDriveSimpleSample
         {
             this.Name = name;
             this.Type = type;
-            if(this.Type == NodeType.Directory) this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
+            if(this.Type == NodeType.Directory) this.Thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
 
         }
 
@@ -66,7 +66,7 @@ namespace OneDriveSimpleSample
         {
             this.Name = item.Name;
             this.ApiResponse = item;
-            if(item.Thumbnails.Any()) this.ThumbnailUrl = item.Thumbnails.FirstOrDefault().Large.Url;
+            
             if (item.Kind == 0)
             {
                 this.Type = NodeType.Directory;
@@ -74,6 +74,7 @@ namespace OneDriveSimpleSample
             }
             else
             {
+                if (item.Thumbnails.Any()) this.ThumbnailUrl = item.Thumbnails.FirstOrDefault().Large.Url;
                 this.Type = NodeType.File;
                 
             }
@@ -119,13 +120,19 @@ namespace OneDriveSimpleSample
             return stream;
         }
 
-        public async Task<IStorageItem> GetStorageItem()
+        public async Task<IStorageItem> GetOneDriveStorageItem()
         {
 
             return await SaveStreamToFile(await OneDriveFilePage._service.RefreshAndDownloadContent(this.ApiResponse, false), Name);
                 
         }
 
+
+
+        public async Task<IStorageFile> GetGoogleDriveStorageItem()
+        {
+            return await SaveStreamToFile(GoogleDrivePage._service.DownloadFile(this.fileRef.Id, this.fileRef.MimeType), Name);
+        }
 
         public async Task<StorageFile> SaveStreamToFile(Stream streamToSave, string fileName)
         {
@@ -153,7 +160,7 @@ namespace OneDriveSimpleSample
         {
             get
             {
-                if (_thumbnail == null && ThumbnailUrl!="" && ThumbnailUrl!=null )
+                if ( ThumbnailUrl!=""  )
                 {
                     getImageFromURL(ThumbnailUrl);
                 }
@@ -206,6 +213,9 @@ namespace OneDriveSimpleSample
             }
         }
 
-       
+        public Task<IStorageItem> GetStorageItem()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

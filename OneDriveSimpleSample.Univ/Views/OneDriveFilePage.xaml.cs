@@ -112,7 +112,7 @@ namespace OneDriveSimpleSample.Views
         private async void Download(Node obj)
         {
             FileSavePicker savePicker = new FileSavePicker();
-            var fs = await obj.GetStorageItem();
+            var fs = await obj.GetOneDriveStorageItem();
 
             ShowBusy(true);
 

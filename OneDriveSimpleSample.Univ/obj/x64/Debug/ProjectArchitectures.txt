@@ -1,0 +1,3 @@
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\GoogleDriveService.csproj;x64
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\OneDriveSimpleSample.Data.csproj;neutral
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\OneDriveSimpleSample.Univ.csproj;x64

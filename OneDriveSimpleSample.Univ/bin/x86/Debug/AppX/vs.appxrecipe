@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>BD0AD6A584DA8AE2FD58AB82B0DEBEC98A9B9EE2332577284B0591E7220BAA80</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>5EE4249E0112FC15CAF37A39C8C0BB4B366C72FAE4BC41B3D9D61856C7A0C464</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>cd4e4838-ca7c-4237-b446-2267e445f0af_1.0.0.0_x86__we21w4g8rdebr</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>cd4e4838-ca7c-4237-b446-2267e445f0af_we21w4g8rdebr!App</RegisteredUserModeAppID>
     <RegisteredPackageID>cd4e4838-ca7c-4237-b446-2267e445f0af</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-07T16:12:54.157</Modified>
+      <Modified>2017-03-08T15:17:20.786</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\OneDriveSimpleSample.Univ.exe">
       <PackagePath>entrypoint\OneDriveSimpleSample.Univ.exe</PackagePath>
-      <Modified>2017-03-07T16:12:53.183</Modified>
+      <Modified>2017-03-08T15:17:19.848</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\.nuget\packages\CommonServiceLocator\1.3.0\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
@@ -564,17 +564,21 @@
       <PackagePath>Microsoft.Practices.Unity.dll</PackagePath>
       <Modified>2015-10-05T07:37:20.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Antoine\.nuget\packages\Zlib.Portable\1.11.0\lib\portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid\Zlib.Portable.dll">
+      <PackagePath>Zlib.Portable.dll</PackagePath>
+      <Modified>2015-06-22T07:00:48.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\bin\Debug\GoogleDriveService.dll">
       <PackagePath>GoogleDriveService.dll</PackagePath>
-      <Modified>2017-03-07T16:12:51.207</Modified>
+      <Modified>2017-03-08T15:17:17.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll">
       <PackagePath>OneDriveSimpleSample.Data.dll</PackagePath>
-      <Modified>2017-03-07T16:12:50.841</Modified>
+      <Modified>2017-03-08T15:17:17.393</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\bin\Debug\OneDriveSimpleSample.Data.dll.config">
       <PackagePath>OneDriveSimpleSample.Data.dll.config</PackagePath>
-      <Modified>2017-03-07T16:12:50.764</Modified>
+      <Modified>2017-03-08T15:17:17.319</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\Assets\doc_blc.png">
       <PackagePath>Assets\doc_blc.png</PackagePath>
@@ -657,11 +661,11 @@
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-07T16:12:53.893</Modified>
+      <Modified>2017-03-08T15:17:20.534</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Core\OneDriveSimpleSample.Univ.exe">
       <PackagePath>OneDriveSimpleSample.Univ.exe</PackagePath>
-      <Modified>2017-03-07T16:12:54.154</Modified>
+      <Modified>2017-03-08T15:17:20.782</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
@@ -694,27 +698,27 @@
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.24930.0</Version>
+      <Version>14.0.25017.0</Version>
       <Architecture>ARM</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24930.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25017.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\ARM\Microsoft.VCLibs.ARM.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.24930.0</Version>
+      <Version>14.0.25017.0</Version>
       <Architecture>x64</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24930.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25017.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x64\Microsoft.VCLibs.x64.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>
     </ResolvedSDKReference>
     <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\">
       <Name>Microsoft.VCLibs.140.00.Debug</Name>
-      <Version>14.0.24930.0</Version>
+      <Version>14.0.25017.0</Version>
       <Architecture>x86</Architecture>
-      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.24930.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.140.00.Debug, MinVersion = 14.0.25017.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
       <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.VCLibs\14.0\.\AppX\Debug\x86\Microsoft.VCLibs.x86.Debug.14.00.appx</AppxLocation>
       <MoreInfo>
       </MoreInfo>

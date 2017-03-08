@@ -70,6 +70,7 @@
                         BorderBrush="#FF33B5E5" 
                         Foreground="#FF33B5E5"
                     BorderThickness="1"
+                        Click="Upload_Click"
                         Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" Background="White"  Width="50" Height="50" FontSize="25" >
 
                     </Button>
@@ -122,7 +123,7 @@
                                     </StackPanel>
                                 </Border>
                                 <Ellipse Height="35" Width="35" HorizontalAlignment="Left" Margin="-10" VerticalAlignment="Top" Stroke="#FF00B4CC" Fill="White" StrokeThickness="1" Visibility="{Binding Type, Converter={StaticResource convBtn}}"/>
-                                <Button Content="&#xE896;" Background="Transparent" Margin="-10" Foreground="#FF00B4CC" FontSize="16" Command="{Binding Path=DataContext.DownloadCommand , ElementName=mainframe}" Visibility="{Binding Type, Converter={StaticResource convBtn}}" CommandParameter="{Binding}" FontFamily="Segoe MDL2 Assets" Height="35" Width="35" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                                <Button Content="&#xE896;" Background="Transparent" Margin="-10" Foreground="#FF00B4CC" FontSize="16" Command="{Binding Path=DataContext.DownloadCommand , ElementName=googleframe}" Visibility="{Binding Type, Converter={StaticResource convBtn}}" CommandParameter="{Binding}" FontFamily="Segoe MDL2 Assets" Height="35" Width="35" HorizontalAlignment="Left" VerticalAlignment="Top"/>
                             </Grid>
                         </DataTemplate>
                     </GridView.ItemTemplate>

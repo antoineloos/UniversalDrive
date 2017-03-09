@@ -549,3 +549,17 @@ C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Microsoft.Practices.Unity.RegistrationByConvention.pri.xml
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Zlib.Portable.dll
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Views\AuthDropBoxPage.xbf
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Views\DropBoxPage.xbf
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\Dropbox.Api.dll
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\DropBoxService.dll
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\DropBoxService.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\bin\x86\Debug\DropBoxService.pri
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\AuthDropBoxPage.g.i.cs
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\AuthDropBoxPage.g.cs
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\DropBoxPage.g.i.cs
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\DropBoxPage.g.cs
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\AuthDropBoxPage.xaml
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\DropBoxPage.xaml
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\AuthDropBoxPage.xbf
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Univ\obj\x86\Debug\Views\DropBoxPage.xbf

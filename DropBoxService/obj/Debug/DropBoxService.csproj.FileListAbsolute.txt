@@ -1,0 +1,17 @@
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\bin\Debug\DropBoxService.dll
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\bin\Debug\DropBoxService.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\bin\Debug\DropBoxService.pri
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\DropBoxService.dll
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\DropBoxService.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\priconfig.xml
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\priconfig.xml.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\layout.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\layout.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\resources.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\resources.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\pri.resfiles
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\pri.resfiles.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\qualifiers.txt
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Antoine\Desktop\UniversalDrive\DropBoxService\obj\Debug\DropBoxService.csprojResolveAssemblyReference.cache

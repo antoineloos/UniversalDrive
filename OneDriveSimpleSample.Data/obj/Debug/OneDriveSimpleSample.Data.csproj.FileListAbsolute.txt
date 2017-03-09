@@ -26,3 +26,4 @@ C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\bin\Debug\Syst
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\obj\Debug\OneDriveSimpleSample.Data.csproj.App.config
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\obj\Debug\OneDriveSimpleSample.Data.dll
 C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\obj\Debug\OneDriveSimpleSample.Data.pdb
+C:\Users\Antoine\Desktop\UniversalDrive\OneDriveSimpleSample.Data\obj\Debug\OneDriveSimpleSample.Data.csprojResolveAssemblyReference.cache

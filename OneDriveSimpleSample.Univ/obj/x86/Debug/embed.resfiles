@@ -1,6 +1,8 @@
 App.xbf
+Views\AuthDropBoxPage.xbf
 Views\AuthGooglePage.xbf
 Views\AuthPage.xbf
+Views\DropBoxPage.xbf
 Views\GoogleDrivePage.xbf
 Views\MainPage.xbf
 Views\OneDriveFilePage.xbf

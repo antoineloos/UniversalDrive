@@ -132,93 +132,97 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[42];
+            _typeNameTable = new string[44];
             _typeNameTable[0] = "Prism.Unity.Windows.PrismUnityApplication";
             _typeNameTable[1] = "Prism.Windows.PrismApplication";
             _typeNameTable[2] = "Windows.UI.Xaml.Application";
             _typeNameTable[3] = "Microsoft.Practices.Unity.IUnityContainer";
             _typeNameTable[4] = "Boolean";
-            _typeNameTable[5] = "OneDriveSimpleSample.Views.AuthGooglePage";
+            _typeNameTable[5] = "OneDriveSimpleSample.Views.AuthDropBoxPage";
             _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[7] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[8] = "OneDriveSimpleSample.Views.AuthPage";
-            _typeNameTable[9] = "OneDriveSimpleSample.Utils.FolderToVisibilityConverter";
-            _typeNameTable[10] = "Object";
-            _typeNameTable[11] = "OneDriveSimpleSample.Utils.VariableGridView";
-            _typeNameTable[12] = "Windows.UI.Xaml.Controls.GridView";
-            _typeNameTable[13] = "Windows.UI.Xaml.Controls.ItemsControl";
-            _typeNameTable[14] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[15] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[17] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[18] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[19] = "Microsoft.Xaml.Interactivity.Trigger";
-            _typeNameTable[20] = "Microsoft.Xaml.Interactivity.Behavior";
-            _typeNameTable[21] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[22] = "String";
-            _typeNameTable[23] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[24] = "System.Windows.Input.ICommand";
-            _typeNameTable[25] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[26] = "OneDriveSimpleSample.Views.GoogleDrivePage";
-            _typeNameTable[27] = "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>";
-            _typeNameTable[28] = "Prism.Commands.DelegateCommandBase";
-            _typeNameTable[29] = "System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>";
-            _typeNameTable[30] = "System.Collections.ObjectModel.Collection`1<OneDriveSimpleSample.Node>";
-            _typeNameTable[31] = "OneDriveSimpleSample.Node";
-            _typeNameTable[32] = "Prism.Mvvm.BindableBase";
-            _typeNameTable[33] = "OneDriveSimpleSample.NodeType";
-            _typeNameTable[34] = "System.Enum";
-            _typeNameTable[35] = "System.ValueType";
-            _typeNameTable[36] = "OneDriveSimpleSample.Response.ItemInfoResponse";
-            _typeNameTable[37] = "OneDriveSimpleSample.Response.ItemInfo";
-            _typeNameTable[38] = "Windows.UI.Xaml.Media.ImageSource";
-            _typeNameTable[39] = "Prism.Windows.Mvvm.ViewModelLocator";
-            _typeNameTable[40] = "OneDriveSimpleSample.Views.MainPage";
-            _typeNameTable[41] = "OneDriveSimpleSample.Views.OneDriveFilePage";
+            _typeNameTable[8] = "OneDriveSimpleSample.Views.AuthGooglePage";
+            _typeNameTable[9] = "OneDriveSimpleSample.Views.AuthPage";
+            _typeNameTable[10] = "OneDriveSimpleSample.Utils.FolderToVisibilityConverter";
+            _typeNameTable[11] = "Object";
+            _typeNameTable[12] = "OneDriveSimpleSample.Utils.VariableGridView";
+            _typeNameTable[13] = "Windows.UI.Xaml.Controls.GridView";
+            _typeNameTable[14] = "Windows.UI.Xaml.Controls.ItemsControl";
+            _typeNameTable[15] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[16] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[17] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[18] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[19] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[20] = "Microsoft.Xaml.Interactivity.Trigger";
+            _typeNameTable[21] = "Microsoft.Xaml.Interactivity.Behavior";
+            _typeNameTable[22] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[23] = "String";
+            _typeNameTable[24] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[25] = "System.Windows.Input.ICommand";
+            _typeNameTable[26] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[27] = "OneDriveSimpleSample.Views.DropBoxPage";
+            _typeNameTable[28] = "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>";
+            _typeNameTable[29] = "Prism.Commands.DelegateCommandBase";
+            _typeNameTable[30] = "System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>";
+            _typeNameTable[31] = "System.Collections.ObjectModel.Collection`1<OneDriveSimpleSample.Node>";
+            _typeNameTable[32] = "OneDriveSimpleSample.Node";
+            _typeNameTable[33] = "Prism.Mvvm.BindableBase";
+            _typeNameTable[34] = "OneDriveSimpleSample.NodeType";
+            _typeNameTable[35] = "System.Enum";
+            _typeNameTable[36] = "System.ValueType";
+            _typeNameTable[37] = "OneDriveSimpleSample.Response.ItemInfoResponse";
+            _typeNameTable[38] = "OneDriveSimpleSample.Response.ItemInfo";
+            _typeNameTable[39] = "Windows.UI.Xaml.Media.ImageSource";
+            _typeNameTable[40] = "OneDriveSimpleSample.Views.GoogleDrivePage";
+            _typeNameTable[41] = "Prism.Windows.Mvvm.ViewModelLocator";
+            _typeNameTable[42] = "OneDriveSimpleSample.Views.MainPage";
+            _typeNameTable[43] = "OneDriveSimpleSample.Views.OneDriveFilePage";
 
-            _typeTable = new global::System.Type[42];
+            _typeTable = new global::System.Type[44];
             _typeTable[0] = typeof(global::Prism.Unity.Windows.PrismUnityApplication);
             _typeTable[1] = typeof(global::Prism.Windows.PrismApplication);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Application);
             _typeTable[3] = typeof(global::Microsoft.Practices.Unity.IUnityContainer);
             _typeTable[4] = typeof(global::System.Boolean);
-            _typeTable[5] = typeof(global::OneDriveSimpleSample.Views.AuthGooglePage);
+            _typeTable[5] = typeof(global::OneDriveSimpleSample.Views.AuthDropBoxPage);
             _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[8] = typeof(global::OneDriveSimpleSample.Views.AuthPage);
-            _typeTable[9] = typeof(global::OneDriveSimpleSample.Utils.FolderToVisibilityConverter);
-            _typeTable[10] = typeof(global::System.Object);
-            _typeTable[11] = typeof(global::OneDriveSimpleSample.Utils.VariableGridView);
-            _typeTable[12] = typeof(global::Windows.UI.Xaml.Controls.GridView);
-            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
-            _typeTable[14] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[17] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[18] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactivity.Trigger);
-            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
-            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[22] = typeof(global::System.String);
-            _typeTable[23] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[24] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[25] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[26] = typeof(global::OneDriveSimpleSample.Views.GoogleDrivePage);
-            _typeTable[27] = typeof(global::Prism.Commands.DelegateCommand<global::OneDriveSimpleSample.Node>);
-            _typeTable[28] = typeof(global::Prism.Commands.DelegateCommandBase);
-            _typeTable[29] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>);
-            _typeTable[30] = typeof(global::System.Collections.ObjectModel.Collection<global::OneDriveSimpleSample.Node>);
-            _typeTable[31] = typeof(global::OneDriveSimpleSample.Node);
-            _typeTable[32] = typeof(global::Prism.Mvvm.BindableBase);
-            _typeTable[33] = typeof(global::OneDriveSimpleSample.NodeType);
-            _typeTable[34] = typeof(global::System.Enum);
-            _typeTable[35] = typeof(global::System.ValueType);
-            _typeTable[36] = typeof(global::OneDriveSimpleSample.Response.ItemInfoResponse);
-            _typeTable[37] = typeof(global::OneDriveSimpleSample.Response.ItemInfo);
-            _typeTable[38] = typeof(global::Windows.UI.Xaml.Media.ImageSource);
-            _typeTable[39] = typeof(global::Prism.Windows.Mvvm.ViewModelLocator);
-            _typeTable[40] = typeof(global::OneDriveSimpleSample.Views.MainPage);
-            _typeTable[41] = typeof(global::OneDriveSimpleSample.Views.OneDriveFilePage);
+            _typeTable[8] = typeof(global::OneDriveSimpleSample.Views.AuthGooglePage);
+            _typeTable[9] = typeof(global::OneDriveSimpleSample.Views.AuthPage);
+            _typeTable[10] = typeof(global::OneDriveSimpleSample.Utils.FolderToVisibilityConverter);
+            _typeTable[11] = typeof(global::System.Object);
+            _typeTable[12] = typeof(global::OneDriveSimpleSample.Utils.VariableGridView);
+            _typeTable[13] = typeof(global::Windows.UI.Xaml.Controls.GridView);
+            _typeTable[14] = typeof(global::Windows.UI.Xaml.Controls.ItemsControl);
+            _typeTable[15] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[16] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[17] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[18] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[19] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[20] = typeof(global::Microsoft.Xaml.Interactivity.Trigger);
+            _typeTable[21] = typeof(global::Microsoft.Xaml.Interactivity.Behavior);
+            _typeTable[22] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[23] = typeof(global::System.String);
+            _typeTable[24] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[25] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[26] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[27] = typeof(global::OneDriveSimpleSample.Views.DropBoxPage);
+            _typeTable[28] = typeof(global::Prism.Commands.DelegateCommand<global::OneDriveSimpleSample.Node>);
+            _typeTable[29] = typeof(global::Prism.Commands.DelegateCommandBase);
+            _typeTable[30] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>);
+            _typeTable[31] = typeof(global::System.Collections.ObjectModel.Collection<global::OneDriveSimpleSample.Node>);
+            _typeTable[32] = typeof(global::OneDriveSimpleSample.Node);
+            _typeTable[33] = typeof(global::Prism.Mvvm.BindableBase);
+            _typeTable[34] = typeof(global::OneDriveSimpleSample.NodeType);
+            _typeTable[35] = typeof(global::System.Enum);
+            _typeTable[36] = typeof(global::System.ValueType);
+            _typeTable[37] = typeof(global::OneDriveSimpleSample.Response.ItemInfoResponse);
+            _typeTable[38] = typeof(global::OneDriveSimpleSample.Response.ItemInfo);
+            _typeTable[39] = typeof(global::Windows.UI.Xaml.Media.ImageSource);
+            _typeTable[40] = typeof(global::OneDriveSimpleSample.Views.GoogleDrivePage);
+            _typeTable[41] = typeof(global::Prism.Windows.Mvvm.ViewModelLocator);
+            _typeTable[42] = typeof(global::OneDriveSimpleSample.Views.MainPage);
+            _typeTable[43] = typeof(global::OneDriveSimpleSample.Views.OneDriveFilePage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -253,40 +257,42 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_5_AuthGooglePage() { return new global::OneDriveSimpleSample.Views.AuthGooglePage(); }
-        private object Activate_8_AuthPage() { return new global::OneDriveSimpleSample.Views.AuthPage(); }
-        private object Activate_9_FolderToVisibilityConverter() { return new global::OneDriveSimpleSample.Utils.FolderToVisibilityConverter(); }
-        private object Activate_11_VariableGridView() { return new global::OneDriveSimpleSample.Utils.VariableGridView(); }
-        private object Activate_15_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_18_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_21_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_23_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_26_GoogleDrivePage() { return new global::OneDriveSimpleSample.Views.GoogleDrivePage(); }
-        private object Activate_29_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>(); }
-        private object Activate_30_Collection() { return new global::System.Collections.ObjectModel.Collection<global::OneDriveSimpleSample.Node>(); }
-        private object Activate_36_ItemInfoResponse() { return new global::OneDriveSimpleSample.Response.ItemInfoResponse(); }
-        private object Activate_39_ViewModelLocator() { return new global::Prism.Windows.Mvvm.ViewModelLocator(); }
-        private object Activate_40_MainPage() { return new global::OneDriveSimpleSample.Views.MainPage(); }
-        private object Activate_41_OneDriveFilePage() { return new global::OneDriveSimpleSample.Views.OneDriveFilePage(); }
-        private void VectorAdd_15_BehaviorCollection(object instance, object item)
+        private object Activate_5_AuthDropBoxPage() { return new global::OneDriveSimpleSample.Views.AuthDropBoxPage(); }
+        private object Activate_8_AuthGooglePage() { return new global::OneDriveSimpleSample.Views.AuthGooglePage(); }
+        private object Activate_9_AuthPage() { return new global::OneDriveSimpleSample.Views.AuthPage(); }
+        private object Activate_10_FolderToVisibilityConverter() { return new global::OneDriveSimpleSample.Utils.FolderToVisibilityConverter(); }
+        private object Activate_12_VariableGridView() { return new global::OneDriveSimpleSample.Utils.VariableGridView(); }
+        private object Activate_16_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_19_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_22_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_24_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_27_DropBoxPage() { return new global::OneDriveSimpleSample.Views.DropBoxPage(); }
+        private object Activate_30_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>(); }
+        private object Activate_31_Collection() { return new global::System.Collections.ObjectModel.Collection<global::OneDriveSimpleSample.Node>(); }
+        private object Activate_37_ItemInfoResponse() { return new global::OneDriveSimpleSample.Response.ItemInfoResponse(); }
+        private object Activate_40_GoogleDrivePage() { return new global::OneDriveSimpleSample.Views.GoogleDrivePage(); }
+        private object Activate_41_ViewModelLocator() { return new global::Prism.Windows.Mvvm.ViewModelLocator(); }
+        private object Activate_42_MainPage() { return new global::OneDriveSimpleSample.Views.MainPage(); }
+        private object Activate_43_OneDriveFilePage() { return new global::OneDriveSimpleSample.Views.OneDriveFilePage(); }
+        private void VectorAdd_16_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_21_ActionCollection(object instance, object item)
+        private void VectorAdd_22_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_29_ObservableCollection(object instance, object item)
+        private void VectorAdd_30_ObservableCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::OneDriveSimpleSample.Node>)instance;
             var newItem = (global::OneDriveSimpleSample.Node)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_30_Collection(object instance, object item)
+        private void VectorAdd_31_Collection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::OneDriveSimpleSample.Node>)instance;
             var newItem = (global::OneDriveSimpleSample.Node)item;
@@ -329,9 +335,9 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  OneDriveSimpleSample.Views.AuthGooglePage
+            case 5:   //  OneDriveSimpleSample.Views.AuthDropBoxPage
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_AuthGooglePage;
+                userType.Activator = Activate_5_AuthDropBoxPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -344,96 +350,103 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  OneDriveSimpleSample.Views.AuthPage
+            case 8:   //  OneDriveSimpleSample.Views.AuthGooglePage
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_AuthPage;
+                userType.Activator = Activate_8_AuthGooglePage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  OneDriveSimpleSample.Utils.FolderToVisibilityConverter
+            case 9:   //  OneDriveSimpleSample.Views.AuthPage
+                userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_9_AuthPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  OneDriveSimpleSample.Utils.FolderToVisibilityConverter
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_9_FolderToVisibilityConverter;
+                userType.Activator = Activate_10_FolderToVisibilityConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Object
+            case 11:   //  Object
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  OneDriveSimpleSample.Utils.VariableGridView
+            case 12:   //  OneDriveSimpleSample.Utils.VariableGridView
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.GridView"));
-                userType.Activator = Activate_11_VariableGridView;
+                userType.Activator = Activate_12_VariableGridView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  Windows.UI.Xaml.Controls.GridView
+            case 13:   //  Windows.UI.Xaml.Controls.GridView
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 13:   //  Windows.UI.Xaml.Controls.ItemsControl
+            case 14:   //  Windows.UI.Xaml.Controls.ItemsControl
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 14:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 15:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 15:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 16:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_15_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_16_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 17:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  Windows.UI.Xaml.DependencyObject
+            case 18:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 18:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 19:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Trigger"));
-                userType.Activator = Activate_18_EventTriggerBehavior;
+                userType.Activator = Activate_19_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactivity.Trigger.Actions");
                 userType.AddMemberName("EventName");
                 userType.AddMemberName("SourceObject");
                 xamlType = userType;
                 break;
 
-            case 19:   //  Microsoft.Xaml.Interactivity.Trigger
+            case 20:   //  Microsoft.Xaml.Interactivity.Trigger
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.Xaml.Interactivity.Behavior"));
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactivity.Trigger.Actions");
                 userType.AddMemberName("Actions");
                 xamlType = userType;
                 break;
 
-            case 20:   //  Microsoft.Xaml.Interactivity.Behavior
+            case 21:   //  Microsoft.Xaml.Interactivity.Behavior
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.AddMemberName("AssociatedObject");
                 xamlType = userType;
                 break;
 
-            case 21:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 22:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_21_ActionCollection;
+                userType.CollectionAdd = VectorAdd_22_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 22:   //  String
+            case 23:   //  String
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 24:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_23_InvokeCommandAction;
+                userType.Activator = Activate_24_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -442,19 +455,19 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 24:   //  System.Windows.Input.ICommand
+            case 25:   //  System.Windows.Input.ICommand
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 25:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 26:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 26:   //  OneDriveSimpleSample.Views.GoogleDrivePage
+            case 27:   //  OneDriveSimpleSample.Views.DropBoxPage
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_26_GoogleDrivePage;
+                userType.Activator = Activate_27_DropBoxPage;
                 userType.AddMemberName("NavigateCommand");
                 userType.AddMemberName("DownloadCommand");
                 userType.AddMemberName("IsNotRootFolder");
@@ -463,49 +476,49 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 27:   //  Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>
+            case 28:   //  Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Prism.Commands.DelegateCommandBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 28:   //  Prism.Commands.DelegateCommandBase
+            case 29:   //  Prism.Commands.DelegateCommandBase
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 29:   //  System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>
+            case 30:   //  System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<OneDriveSimpleSample.Node>"));
-                userType.CollectionAdd = VectorAdd_29_ObservableCollection;
+                userType.CollectionAdd = VectorAdd_30_ObservableCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 30:   //  System.Collections.ObjectModel.Collection`1<OneDriveSimpleSample.Node>
+            case 31:   //  System.Collections.ObjectModel.Collection`1<OneDriveSimpleSample.Node>
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_30_Collection;
-                userType.CollectionAdd = VectorAdd_30_Collection;
+                userType.Activator = Activate_31_Collection;
+                userType.CollectionAdd = VectorAdd_31_Collection;
                 xamlType = userType;
                 break;
 
-            case 31:   //  OneDriveSimpleSample.Node
+            case 32:   //  OneDriveSimpleSample.Node
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Prism.Mvvm.BindableBase"));
                 userType.AddMemberName("Name");
                 userType.AddMemberName("ThumbnailUrl");
                 userType.AddMemberName("Type");
                 userType.AddMemberName("_parent");
-                userType.AddMemberName("ApiResponse");
+                userType.AddMemberName("OneRef");
                 userType.AddMemberName("Thumbnail");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 32:   //  Prism.Mvvm.BindableBase
+            case 33:   //  Prism.Mvvm.BindableBase
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 33:   //  OneDriveSimpleSample.NodeType
+            case 34:   //  OneDriveSimpleSample.NodeType
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("File", global::OneDriveSimpleSample.NodeType.File);
                 userType.AddEnumValue("Directory", global::OneDriveSimpleSample.NodeType.Directory);
@@ -513,48 +526,59 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 34:   //  System.Enum
+            case 35:   //  System.Enum
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 35:   //  System.ValueType
+            case 36:   //  System.ValueType
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 36:   //  OneDriveSimpleSample.Response.ItemInfoResponse
+            case 37:   //  OneDriveSimpleSample.Response.ItemInfoResponse
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("OneDriveSimpleSample.Response.ItemInfo"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 37:   //  OneDriveSimpleSample.Response.ItemInfo
+            case 38:   //  OneDriveSimpleSample.Response.ItemInfo
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 38:   //  Windows.UI.Xaml.Media.ImageSource
+            case 39:   //  Windows.UI.Xaml.Media.ImageSource
                 xamlType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 39:   //  Prism.Windows.Mvvm.ViewModelLocator
-                userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_39_ViewModelLocator;
-                userType.AddMemberName("AutoWireViewModel");
-                xamlType = userType;
-                break;
-
-            case 40:   //  OneDriveSimpleSample.Views.MainPage
+            case 40:   //  OneDriveSimpleSample.Views.GoogleDrivePage
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_40_MainPage;
+                userType.Activator = Activate_40_GoogleDrivePage;
+                userType.AddMemberName("NavigateCommand");
+                userType.AddMemberName("DownloadCommand");
+                userType.AddMemberName("IsNotRootFolder");
+                userType.AddMemberName("LstNode");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 41:   //  OneDriveSimpleSample.Views.OneDriveFilePage
+            case 41:   //  Prism.Windows.Mvvm.ViewModelLocator
+                userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_41_ViewModelLocator;
+                userType.AddMemberName("AutoWireViewModel");
+                xamlType = userType;
+                break;
+
+            case 42:   //  OneDriveSimpleSample.Views.MainPage
                 userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_41_OneDriveFilePage;
+                userType.Activator = Activate_42_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 43:   //  OneDriveSimpleSample.Views.OneDriveFilePage
+                userType = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_43_OneDriveFilePage;
                 userType.AddMemberName("DownloadCommand");
                 userType.AddMemberName("NavigateCommand");
                 userType.AddMemberName("IsNotRootFolder");
@@ -665,34 +689,34 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
         }
-        private object get_12_GoogleDrivePage_NavigateCommand(object instance)
+        private object get_12_DropBoxPage_NavigateCommand(object instance)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             return that.NavigateCommand;
         }
-        private object get_13_GoogleDrivePage_DownloadCommand(object instance)
+        private object get_13_DropBoxPage_DownloadCommand(object instance)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             return that.DownloadCommand;
         }
-        private object get_14_GoogleDrivePage_IsNotRootFolder(object instance)
+        private object get_14_DropBoxPage_IsNotRootFolder(object instance)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             return that.IsNotRootFolder;
         }
-        private void set_14_GoogleDrivePage_IsNotRootFolder(object instance, object Value)
+        private void set_14_DropBoxPage_IsNotRootFolder(object instance, object Value)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             that.IsNotRootFolder = (global::System.Boolean)Value;
         }
-        private object get_15_GoogleDrivePage_LstNode(object instance)
+        private object get_15_DropBoxPage_LstNode(object instance)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             return that.LstNode;
         }
-        private void set_15_GoogleDrivePage_LstNode(object instance, object Value)
+        private void set_15_DropBoxPage_LstNode(object instance, object Value)
         {
-            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            var that = (global::OneDriveSimpleSample.Views.DropBoxPage)instance;
             that.LstNode = (global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>)Value;
         }
         private object get_16_Node_Name(object instance)
@@ -735,15 +759,15 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
             var that = (global::OneDriveSimpleSample.Node)instance;
             that._parent = (global::OneDriveSimpleSample.Node)Value;
         }
-        private object get_20_Node_ApiResponse(object instance)
+        private object get_20_Node_OneRef(object instance)
         {
             var that = (global::OneDriveSimpleSample.Node)instance;
-            return that.ApiResponse;
+            return that.OneRef;
         }
-        private void set_20_Node_ApiResponse(object instance, object Value)
+        private void set_20_Node_OneRef(object instance, object Value)
         {
             var that = (global::OneDriveSimpleSample.Node)instance;
-            that.ApiResponse = (global::OneDriveSimpleSample.Response.ItemInfoResponse)Value;
+            that.OneRef = (global::OneDriveSimpleSample.Response.ItemInfoResponse)Value;
         }
         private object get_21_Node_Thumbnail(object instance)
         {
@@ -755,40 +779,70 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
             var that = (global::OneDriveSimpleSample.Node)instance;
             that.Thumbnail = (global::Windows.UI.Xaml.Media.ImageSource)Value;
         }
-        private object get_22_ViewModelLocator_AutoWireViewModel(object instance)
+        private object get_22_GoogleDrivePage_NavigateCommand(object instance)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            return that.NavigateCommand;
+        }
+        private object get_23_GoogleDrivePage_DownloadCommand(object instance)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            return that.DownloadCommand;
+        }
+        private object get_24_GoogleDrivePage_IsNotRootFolder(object instance)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            return that.IsNotRootFolder;
+        }
+        private void set_24_GoogleDrivePage_IsNotRootFolder(object instance, object Value)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            that.IsNotRootFolder = (global::System.Boolean)Value;
+        }
+        private object get_25_GoogleDrivePage_LstNode(object instance)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            return that.LstNode;
+        }
+        private void set_25_GoogleDrivePage_LstNode(object instance, object Value)
+        {
+            var that = (global::OneDriveSimpleSample.Views.GoogleDrivePage)instance;
+            that.LstNode = (global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>)Value;
+        }
+        private object get_26_ViewModelLocator_AutoWireViewModel(object instance)
         {
             return global::Prism.Windows.Mvvm.ViewModelLocator.GetAutoWireViewModel((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_22_ViewModelLocator_AutoWireViewModel(object instance, object Value)
+        private void set_26_ViewModelLocator_AutoWireViewModel(object instance, object Value)
         {
             global::Prism.Windows.Mvvm.ViewModelLocator.SetAutoWireViewModel((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Boolean)Value);
         }
-        private object get_23_OneDriveFilePage_DownloadCommand(object instance)
+        private object get_27_OneDriveFilePage_DownloadCommand(object instance)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             return that.DownloadCommand;
         }
-        private object get_24_OneDriveFilePage_NavigateCommand(object instance)
+        private object get_28_OneDriveFilePage_NavigateCommand(object instance)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             return that.NavigateCommand;
         }
-        private object get_25_OneDriveFilePage_IsNotRootFolder(object instance)
+        private object get_29_OneDriveFilePage_IsNotRootFolder(object instance)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             return that.IsNotRootFolder;
         }
-        private void set_25_OneDriveFilePage_IsNotRootFolder(object instance, object Value)
+        private void set_29_OneDriveFilePage_IsNotRootFolder(object instance, object Value)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             that.IsNotRootFolder = (global::System.Boolean)Value;
         }
-        private object get_26_OneDriveFilePage_LstNode(object instance)
+        private object get_30_OneDriveFilePage_LstNode(object instance)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             return that.LstNode;
         }
-        private void set_26_OneDriveFilePage_LstNode(object instance, object Value)
+        private void set_30_OneDriveFilePage_LstNode(object instance, object Value)
         {
             var that = (global::OneDriveSimpleSample.Views.OneDriveFilePage)instance;
             that.LstNode = (global::System.Collections.ObjectModel.ObservableCollection<global::OneDriveSimpleSample.Node>)Value;
@@ -883,29 +937,29 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlMember.Getter = get_11_InvokeCommandAction_InputConverterLanguage;
                 xamlMember.Setter = set_11_InvokeCommandAction_InputConverterLanguage;
                 break;
-            case "OneDriveSimpleSample.Views.GoogleDrivePage.NavigateCommand":
-                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+            case "OneDriveSimpleSample.Views.DropBoxPage.NavigateCommand":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.DropBoxPage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "NavigateCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_12_GoogleDrivePage_NavigateCommand;
+                xamlMember.Getter = get_12_DropBoxPage_NavigateCommand;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "OneDriveSimpleSample.Views.GoogleDrivePage.DownloadCommand":
-                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+            case "OneDriveSimpleSample.Views.DropBoxPage.DownloadCommand":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.DropBoxPage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "DownloadCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_13_GoogleDrivePage_DownloadCommand;
+                xamlMember.Getter = get_13_DropBoxPage_DownloadCommand;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "OneDriveSimpleSample.Views.GoogleDrivePage.IsNotRootFolder":
-                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+            case "OneDriveSimpleSample.Views.DropBoxPage.IsNotRootFolder":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.DropBoxPage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "IsNotRootFolder", "Boolean");
-                xamlMember.Getter = get_14_GoogleDrivePage_IsNotRootFolder;
-                xamlMember.Setter = set_14_GoogleDrivePage_IsNotRootFolder;
+                xamlMember.Getter = get_14_DropBoxPage_IsNotRootFolder;
+                xamlMember.Setter = set_14_DropBoxPage_IsNotRootFolder;
                 break;
-            case "OneDriveSimpleSample.Views.GoogleDrivePage.LstNode":
-                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+            case "OneDriveSimpleSample.Views.DropBoxPage.LstNode":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.DropBoxPage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "LstNode", "System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_15_GoogleDrivePage_LstNode;
-                xamlMember.Setter = set_15_GoogleDrivePage_LstNode;
+                xamlMember.Getter = get_15_DropBoxPage_LstNode;
+                xamlMember.Setter = set_15_DropBoxPage_LstNode;
                 break;
             case "OneDriveSimpleSample.Node.Name":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Node");
@@ -931,11 +985,11 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlMember.Getter = get_19_Node__parent;
                 xamlMember.Setter = set_19_Node__parent;
                 break;
-            case "OneDriveSimpleSample.Node.ApiResponse":
+            case "OneDriveSimpleSample.Node.OneRef":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Node");
-                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "ApiResponse", "OneDriveSimpleSample.Response.ItemInfoResponse");
-                xamlMember.Getter = get_20_Node_ApiResponse;
-                xamlMember.Setter = set_20_Node_ApiResponse;
+                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "OneRef", "OneDriveSimpleSample.Response.ItemInfoResponse");
+                xamlMember.Getter = get_20_Node_OneRef;
+                xamlMember.Setter = set_20_Node_OneRef;
                 break;
             case "OneDriveSimpleSample.Node.Thumbnail":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Node");
@@ -943,37 +997,61 @@ namespace OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo
                 xamlMember.Getter = get_21_Node_Thumbnail;
                 xamlMember.Setter = set_21_Node_Thumbnail;
                 break;
+            case "OneDriveSimpleSample.Views.GoogleDrivePage.NavigateCommand":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "NavigateCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
+                xamlMember.Getter = get_22_GoogleDrivePage_NavigateCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "OneDriveSimpleSample.Views.GoogleDrivePage.DownloadCommand":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "DownloadCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
+                xamlMember.Getter = get_23_GoogleDrivePage_DownloadCommand;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "OneDriveSimpleSample.Views.GoogleDrivePage.IsNotRootFolder":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "IsNotRootFolder", "Boolean");
+                xamlMember.Getter = get_24_GoogleDrivePage_IsNotRootFolder;
+                xamlMember.Setter = set_24_GoogleDrivePage_IsNotRootFolder;
+                break;
+            case "OneDriveSimpleSample.Views.GoogleDrivePage.LstNode":
+                userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.GoogleDrivePage");
+                xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "LstNode", "System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>");
+                xamlMember.Getter = get_25_GoogleDrivePage_LstNode;
+                xamlMember.Setter = set_25_GoogleDrivePage_LstNode;
+                break;
             case "Prism.Windows.Mvvm.ViewModelLocator.AutoWireViewModel":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Prism.Windows.Mvvm.ViewModelLocator");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "AutoWireViewModel", "Boolean");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_22_ViewModelLocator_AutoWireViewModel;
-                xamlMember.Setter = set_22_ViewModelLocator_AutoWireViewModel;
+                xamlMember.Getter = get_26_ViewModelLocator_AutoWireViewModel;
+                xamlMember.Setter = set_26_ViewModelLocator_AutoWireViewModel;
                 break;
             case "OneDriveSimpleSample.Views.OneDriveFilePage.DownloadCommand":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.OneDriveFilePage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "DownloadCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_23_OneDriveFilePage_DownloadCommand;
+                xamlMember.Getter = get_27_OneDriveFilePage_DownloadCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "OneDriveSimpleSample.Views.OneDriveFilePage.NavigateCommand":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.OneDriveFilePage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "NavigateCommand", "Prism.Commands.DelegateCommand`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_24_OneDriveFilePage_NavigateCommand;
+                xamlMember.Getter = get_28_OneDriveFilePage_NavigateCommand;
                 xamlMember.SetIsReadOnly();
                 break;
             case "OneDriveSimpleSample.Views.OneDriveFilePage.IsNotRootFolder":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.OneDriveFilePage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "IsNotRootFolder", "Boolean");
-                xamlMember.Getter = get_25_OneDriveFilePage_IsNotRootFolder;
-                xamlMember.Setter = set_25_OneDriveFilePage_IsNotRootFolder;
+                xamlMember.Getter = get_29_OneDriveFilePage_IsNotRootFolder;
+                xamlMember.Setter = set_29_OneDriveFilePage_IsNotRootFolder;
                 break;
             case "OneDriveSimpleSample.Views.OneDriveFilePage.LstNode":
                 userType = (global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlUserType)GetXamlTypeByName("OneDriveSimpleSample.Views.OneDriveFilePage");
                 xamlMember = new global::OneDriveSimpleSample.OneDriveSimpleSample_Univ_XamlTypeInfo.XamlMember(this, "LstNode", "System.Collections.ObjectModel.ObservableCollection`1<OneDriveSimpleSample.Node>");
-                xamlMember.Getter = get_26_OneDriveFilePage_LstNode;
-                xamlMember.Setter = set_26_OneDriveFilePage_LstNode;
+                xamlMember.Getter = get_30_OneDriveFilePage_LstNode;
+                xamlMember.Setter = set_30_OneDriveFilePage_LstNode;
                 break;
             }
             return xamlMember;

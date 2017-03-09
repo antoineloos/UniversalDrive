@@ -29,11 +29,12 @@
       <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
-      <RootProperty Name="Children" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Children" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
@@ -52,6 +53,7 @@
       <RootProperty Name="ElementName" />
       <RootProperty Name="Converter" />
     </RootType>
+    <RootType FullName="OneDriveSimpleSample.Views.AuthDropBoxPage" />
     <RootType FullName="OneDriveSimpleSample.Views.AuthGooglePage" />
     <RootType FullName="OneDriveSimpleSample.Views.AuthPage" />
     <RootType FullName="OneDriveSimpleSample.Utils.FolderToVisibilityConverter" />
@@ -86,7 +88,6 @@
       <RootProperty Name="Property" />
       <RootProperty Name="Value" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
     </RootType>
@@ -183,6 +184,7 @@
       <RootProperty Name="Data" />
       <RootProperty Name="Fill" />
     </RootType>
+    <RootType FullName="OneDriveSimpleSample.Views.DropBoxPage" />
     <RootType FullName="OneDriveSimpleSample.Views.GoogleDrivePage" />
     <RootType FullName="Prism.Windows.Mvvm.ViewModelLocator">
       <RootMethod Name="GetAutoWireViewModel" />

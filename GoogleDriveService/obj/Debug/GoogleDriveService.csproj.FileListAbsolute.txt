@@ -30,3 +30,4 @@ C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\Debug\pri.resfile
 C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\Debug\qualifiers.txt
 C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Antoine\Desktop\UniversalDrive\GoogleDriveService\obj\Debug\GoogleDriveService.csprojResolveAssemblyReference.cache

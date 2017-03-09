@@ -390,11 +390,11 @@ namespace OneDriveSimpleSample.Views
                 try
                 {
                     // For the demo, save this file in the App folder
-                    var folder = await _service.GetAppRoot();
+                    
 
                     using (var stream = await file.OpenStreamForReadAsync())
                     {
-                        var info = await _service.SaveFile(folder.Id, file.Name, stream);
+                        var info = await _service.SaveFile(currentFolder.OneRef.Id, file.Name, stream);
 
                         // Save for the GetLink demo
                         _savedId = info.Id;

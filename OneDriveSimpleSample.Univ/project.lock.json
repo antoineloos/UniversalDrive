@@ -11,6 +11,18 @@
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
         }
       },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        }
+      },
       "Google.Apis/1.21.0": {
         "type": "package",
         "dependencies": {
@@ -2389,6 +2401,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -2410,6 +2430,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -4918,6 +4950,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -4939,6 +4979,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -7486,6 +7538,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -7507,6 +7567,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -10024,6 +10096,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -10045,6 +10125,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -12601,6 +12693,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -12622,6 +12722,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -15139,6 +15251,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -15160,6 +15280,18 @@
         },
         "runtime": {
           "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll": {}
+        }
+      },
+      "Dropbox.Api/4.2.3": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1"
+        },
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll": {}
         }
       },
       "Google.Apis/1.21.0": {
@@ -17716,6 +17848,14 @@
           "lib/portable-net4+sl5+wp8+win8+wpa81+MonoTouch+MonoAndroid/Zlib.Portable.dll": {}
         }
       },
+      "DropBoxService/1.0.0": {
+        "type": "project",
+        "framework": "UAP,Version=v10.0",
+        "dependencies": {
+          "Dropbox.Api": "4.2.3",
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2"
+        }
+      },
       "GoogleDriveService/1.0.0": {
         "type": "project",
         "framework": "UAP,Version=v10.0",
@@ -17741,6 +17881,21 @@
         "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.XML",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.pdb"
+      ]
+    },
+    "Dropbox.Api/4.2.3": {
+      "sha512": "7/pheK/ptTUx6paSaCSIglz9u4zvKhpUVzpKeXkvY1/vAZDYBj8AWFbwuoVfF9/BLgUQCO1P357PF1QI7ChP3g==",
+      "type": "package",
+      "path": "dropbox.api/4.2.3",
+      "files": [
+        "dropbox.api.4.2.3.nupkg.sha512",
+        "dropbox.api.nuspec",
+        "lib/net45/Dropbox.Api.dll",
+        "lib/net45/Dropbox.Api.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Dropbox.Api.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Dropbox.Api.xml",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.dll",
+        "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Dropbox.Api.xml"
       ]
     },
     "Google.Apis/1.21.0": {
@@ -24384,6 +24539,11 @@
         "zlib.portable.nuspec"
       ]
     },
+    "DropBoxService/1.0.0": {
+      "type": "project",
+      "path": "../DropBoxService/project.json",
+      "msbuildProject": "../DropBoxService/DropBoxService.csproj"
+    },
     "GoogleDriveService/1.0.0": {
       "type": "project",
       "path": "../GoogleDriveService/project.json",
@@ -24424,6 +24584,9 @@
             },
             "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj": {
               "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\OneDriveSimpleSample.Data\\OneDriveSimpleSample.Data.csproj"
+            },
+            "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\DropBoxService\\DropBoxService.csproj": {
+              "projectPath": "C:\\Users\\Antoine\\Desktop\\UniversalDrive\\DropBoxService\\DropBoxService.csproj"
             }
           }
         }

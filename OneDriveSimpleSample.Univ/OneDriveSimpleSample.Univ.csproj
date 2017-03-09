@@ -100,11 +100,17 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Utils\MimeAssistant.cs" />
+    <Compile Include="Views\AuthDropBoxPage.xaml.cs">
+      <DependentUpon>AuthDropBoxPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AuthGooglePage.xaml.cs">
       <DependentUpon>AuthGooglePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AuthPage.xaml.cs">
       <DependentUpon>AuthPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DropBoxPage.xaml.cs">
+      <DependentUpon>DropBoxPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\GoogleDrivePage.xaml.cs">
       <DependentUpon>GoogleDrivePage.xaml</DependentUpon>
@@ -152,11 +158,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\AuthDropBoxPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AuthGooglePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\AuthPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DropBoxPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +188,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DropBoxService\DropBoxService.csproj">
+      <Project>{7b489792-799d-483a-8620-6433488fc7b2}</Project>
+      <Name>DropBoxService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GoogleDriveService\GoogleDriveService.csproj">
       <Project>{A7E088C4-C9C8-41D4-B905-41D7D0AA18FD}</Project>
       <Name>GoogleDriveService</Name>

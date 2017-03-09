@@ -1,4 +1,5 @@
-﻿using OneDriveSimpleSample.Response;
+﻿using Dropbox.Api.Files;
+using OneDriveSimpleSample.Response;
 using OneDriveSimpleSample.Utils;
 using OneDriveSimpleSample.Views;
 using Prism.Mvvm;
@@ -47,7 +48,9 @@ namespace OneDriveSimpleSample
     {
         internal readonly IStorageItem _item;
 
-        public Google.Apis.Drive.v3.Data.File fileRef;
+        public Google.Apis.Drive.v3.Data.File googleRef;
+
+        public Dropbox.Api.Files.Metadata dropRef;
 
         public Node(String name, NodeType type)
         {
@@ -65,7 +68,7 @@ namespace OneDriveSimpleSample
         public Node(ItemInfoResponse item)
         {
             this.Name = item.Name;
-            this.ApiResponse = item;
+            this.OneRef = item;
             
             if (item.Kind == 0)
             {
@@ -81,10 +84,33 @@ namespace OneDriveSimpleSample
 
         }
 
+        public Node(Dropbox.Api.Files.Metadata item , BitmapImage thumbnail = null)
+        {
+            this.dropRef = item;
+            this.Name = item.Name;
+           
+            if (item.IsFolder)
+            {
+                this.Type = NodeType.Directory;
+                this._thumbnail = new BitmapImage(new Uri("ms-appx://OneDriveSimpleSample/Assets/folder_drop.jpg"));
+            }
+            else if(item.IsFile)
+            {
+                this.Type = NodeType.File;
+                if (thumbnail != null)
+                {
+                    ThumbnailUrl = "dropBoxSystem";
+                    _thumbnail = thumbnail;
+
+                }
+                else ThumbnailUrl = "";
+            }
+        }
+
         public Node(Google.Apis.Drive.v3.Data.File item)
         {
             this.Name = item.Name;
-            this.fileRef = item;
+            this.googleRef = item;
             if (item.ThumbnailLink!=null) this.ThumbnailUrl = item.ThumbnailLink;
             if ((item.MimeType == "application/vnd.google-apps.folder"))
             {
@@ -107,7 +133,7 @@ namespace OneDriveSimpleSample
 
         public Node _parent { get; set; }
 
-        public ItemInfoResponse ApiResponse { get; set; }
+        public ItemInfoResponse OneRef { get; set; }
 
         public async Task<Stream> GetFileStream()
         {
@@ -123,15 +149,20 @@ namespace OneDriveSimpleSample
         public async Task<IStorageItem> GetOneDriveStorageItem()
         {
 
-            return await SaveStreamToFile(await OneDriveFilePage._service.RefreshAndDownloadContent(this.ApiResponse, false), Name);
+            return await SaveStreamToFile(await OneDriveFilePage._service.RefreshAndDownloadContent(this.OneRef, false), Name);
                 
         }
 
+        public async Task<IStorageItem> GetDropBoxStorageItem()
+        {
+            var response = await DropBoxPage._service.Client.Files.DownloadAsync(new DownloadArg(this.dropRef.PathLower));
+            return await SaveStreamToFile(await response.GetContentAsStreamAsync(), Name);
 
+        }
 
         public async Task<IStorageFile> GetGoogleDriveStorageItem()
         {
-            return await SaveStreamToFile(GoogleDrivePage._service.DownloadFile(this.fileRef.Id, this.fileRef.MimeType), Name);
+            return await SaveStreamToFile(GoogleDrivePage._service.DownloadFile(this.googleRef.Id, this.googleRef.MimeType), Name);
         }
 
         public async Task<StorageFile> SaveStreamToFile(Stream streamToSave, string fileName)
@@ -160,7 +191,7 @@ namespace OneDriveSimpleSample
         {
             get
             {
-                if ( ThumbnailUrl!=""  )
+                if ( ThumbnailUrl!="" && ThumbnailUrl!=null )
                 {
                     getImageFromURL(ThumbnailUrl);
                 }
@@ -185,6 +216,7 @@ namespace OneDriveSimpleSample
             {
                 try
                 {
+                    if (sURL == "dropBoxSystem") return; 
                     HttpResponseMessage response = await client.GetAsync(new Uri(sURL));
 
                     BitmapImage bitmap = new BitmapImage();

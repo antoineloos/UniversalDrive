@@ -95,7 +95,7 @@ namespace OneDriveSimpleSample.Views
 
 
                     LstNode.Clear();
-                    var children = _service.GetSubFolderChildren(obj.fileRef.Id);
+                    var children = _service.GetSubFolderChildren(obj.googleRef.Id);
 
                     foreach (Google.Apis.Drive.v3.Data.File item in children)
                     {
@@ -181,22 +181,10 @@ namespace OneDriveSimpleSample.Views
 
 
 
-        private void ShowBusy(bool isBusy)
-        {
-            Progress.IsActive = isBusy;
-            PleaseWaitCache.Visibility = isBusy ? Visibility.Visible : Visibility.Collapsed;
-        }
+        
 
 
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (currentFolder._parent != null) Navigate(currentFolder._parent);
-            else
-            {
-                Navigate();
-                IsNotRootFolder = false;
-            }
-        }
+        
 
         private async void Download(Node obj)
         {
@@ -221,7 +209,7 @@ namespace OneDriveSimpleSample.Views
             {
                 ShowBusy(true);
 
-                var request = _service._service.Files.Get(obj.fileRef.Id);
+                var request = _service._service.Files.Get(obj.googleRef.Id);
                 Stream stream = new MemoryStream();
                 request.MediaDownloader.ProgressChanged +=
                async (Google.Apis.Download.IDownloadProgress progress) =>
@@ -263,6 +251,23 @@ namespace OneDriveSimpleSample.Views
             
 
 
+        }
+
+
+        private void ShowBusy(bool isBusy)
+        {
+            Progress.IsActive = isBusy;
+            PleaseWaitCache.Visibility = isBusy ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (currentFolder._parent != null) Navigate(currentFolder._parent);
+            else
+            {
+                Navigate();
+                IsNotRootFolder = false;
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
